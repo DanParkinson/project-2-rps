@@ -1,7 +1,7 @@
 /* constants and choice array */
 
 const choices = ["rock", "paper", "scissors"];
-const buttons = document.getElementsByClassName("control");
+const buttons = document.getElementsByClassName("controls");
 
 /* button click starts game */
 for (let button of buttons) {
@@ -13,5 +13,8 @@ for (let button of buttons) {
 
 function playGame(playerChoice) {
 
-    
+        /*generates computer choice*/
+        const computerChoice = choices[Math.floor(Math.random() * 3)];
+        let result = "";
+        console.log(computerChoice);
 }
