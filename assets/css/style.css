@@ -17,7 +17,7 @@ body {
 #gamearea {
     background-color: #92C7CF;
     width: 80%;
-    height: 70vh;
+    height: 60vh;
     margin: auto;
 }
 
@@ -93,7 +93,7 @@ body {
 
 #scorearea p {
     letter-spacing: 1px;
-    font-size: 0.75rem;
+    font-size: 1rem;
     margin: 5px;
     margin-top: 30px;
     width: 75px;
@@ -105,13 +105,23 @@ body {
 }
 
 .greentext {
-    color:green;
+    color: green;
 }
 
 /* --------- hide */
 .hide {
     display: none;
+}
 
+.gameover {
+    font-size: 5rem;
+    color: red;
+}
+
+.restart {
+    font-size: 2rem;
+    height: 20%;
+    width: 40%;
 }
 
 /* --------- Media queries smaller than 400px */
