@@ -8,6 +8,8 @@ const resultDisplay = document.getElementById("result");
 const currentScoreDisplay = document.getElementById("currentscoredisplay");
 const livesDisplay = document.getElementById("livesdisplay");
 const highScoreDisplay = document.getElementById("highscoredisplay");
+const gameOverScreen = document.getElementById("gameoverscreen");
+const gameArea = document.getElementById("gamearea");
 
 var currentScore = 0;
 var lives = 3;
@@ -68,6 +70,9 @@ function playGame(playerChoice) {
             resultDisplay.classList.add("redtext");
             lives--;
             livesDisplay.textContent = lives;
+            if (lives < 1) {
+                gameOver();
+            }
             break;
     }
 
@@ -75,4 +80,10 @@ function playGame(playerChoice) {
         highScore++;
         highScoreDisplay.textContent = highScore;
     }
+}
+
+/*loads gameover screen*/
+function gameOver() {
+    gameArea.classList.add("hide");
+    gameOverScreen.classList.remove("hide");
 }
