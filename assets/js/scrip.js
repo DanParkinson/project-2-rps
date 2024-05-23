@@ -87,3 +87,23 @@ function gameOver() {
     gameArea.classList.add("hide");
     gameOverScreen.classList.remove("hide");
 }
+
+/*restart button function*/
+function restart() {
+    gameArea.classList.remove("hide");
+    gameOverScreen.classList.add("hide");
+
+    currentScore = 0
+    lives = 3;
+
+    currentScoreDisplay.textContent = `0`;
+    livesDisplay.textContent = `3`;
+
+    playerDisplay.src = ``;
+    playerDisplay.alt = ``;
+
+    computerDisplay.src = ``;
+    computerDisplay.alt = ``;
+
+    resultDisplay.textContent = ``;
+}
