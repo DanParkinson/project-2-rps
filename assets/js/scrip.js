@@ -1,5 +1,4 @@
 /* constants and choice array */
-
 const choices = ["rock", "paper", "scissors"];
 const buttons = document.getElementsByClassName("controls");
 const playerDisplay = document.getElementById("playerchoiceimg");
@@ -28,7 +27,6 @@ function playGame(playerChoice) {
     /*generates computer choice*/
     const computerChoice = choices[Math.floor(Math.random() * 3)];
     let result = "";
-    console.log(computerChoice);
 
     /*compares playerchoice to computerchoice*/
     if (playerChoice === computerChoice) {
@@ -46,7 +44,6 @@ function playGame(playerChoice) {
                 break;
         }
     }
-    console.log(result);
 
     /*changes images to player and computer choice and prints result*/
     playerDisplay.src = `assets/images/${playerChoice}.png`;
@@ -57,7 +54,7 @@ function playGame(playerChoice) {
 
     resultDisplay.textContent = result;
 
-    /*resets color of results messages*/
+    /* color of results messages*/
     resultDisplay.classList.remove("greentext", "redtext")
 
     switch (result) {
