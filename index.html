@@ -9,8 +9,34 @@
 </head>
 
 <body>
+    <h1 class="heading">Rock Paper Scissors</h1>
 
-    
+    <div id="gamearea">
+        <div id="controlarea">
+            <button class="controls" data-type="rock"> </button>
+            <button class="controls" data-type="paper"> </button>
+            <button class="controls" data-type="scissors"> </button>
+        </div>
+
+        <div id="displayarea">
+            <div id="playerdisplay">
+                <h2>Player Choice:</h2>
+                <img id="playerchoiceimg" src="" alt="rock">
+            </div>
+            <div id="computerdisplay">
+                <h2>Computer Choice:</h2>
+                <img id="computerchoiceimg" src="" alt="rock">
+            </div>
+        </div>
+
+        <div id="scorearea">
+            <p class="scores">Current score: <span id="currentscoredisplay">0</span></p>
+            <p class="scores">High score: <span id="highscoredisplay">0</span></p>
+            <p class="scores">Lives: <span id="livesdisplay">3</span></p>
+        </div>
+    </div>
+
+
 
     <script src="assets/js/scrip.js"></script>
 </body>
