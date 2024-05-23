@@ -9,6 +9,7 @@ const livesDisplay = document.getElementById("livesdisplay");
 const highScoreDisplay = document.getElementById("highscoredisplay");
 const gameOverScreen = document.getElementById("gameoverscreen");
 const gameArea = document.getElementById("gamearea");
+const footer = document.getElementById("footer");
 
 var currentScore = 0;
 var lives = 3;
@@ -81,14 +82,17 @@ function playGame(playerChoice) {
 
 /*loads gameover screen*/
 function gameOver() {
+    footer.classList.add("hide");
     gameArea.classList.add("hide");
     gameOverScreen.classList.remove("hide");
 }
 
 /*restart button function*/
 function restart() {
+    footer.classList.remove("hide");
     gameArea.classList.remove("hide");
     gameOverScreen.classList.add("hide");
+    
 
     currentScore = 0
     lives = 3;

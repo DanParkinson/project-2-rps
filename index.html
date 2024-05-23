@@ -9,9 +9,11 @@
 </head>
 
 <body>
-    <h1 class="heading">Rock Paper Scissors</h1>
+    <header>
+        <h1 class="heading">Rock Paper Scissors</h1>
+    </header>
 
-    <div id="gamearea">
+    <section id="gamearea">
         <div id="controlarea">
             <button class="controls" data-type="rock"> <img src="assets/images/rock.png" alt="Rock"><img
                     src="assets/images/rock1.png" alt="Rock"> </button>
@@ -38,12 +40,16 @@
             <p class="scores">High score: <span id="highscoredisplay">0</span></p>
             <p class="scores">Lives: <span id="livesdisplay">3</span></p>
         </div>
-    </div>
+    </section>
 
-    <div id="gameoverscreen" class="hide">
-        <h2 class="gameover" >GAME OVER!</h2>
-        <button class ="restart" onclick="restart()">Play Again?</button>
-    </div>
+    <section id="gameoverscreen" class="hide">
+        <h2 class="gameover">GAME OVER!</h2>
+        <button class="restart" onclick="restart()">Play Again?</button>
+    </section>
+
+    <footer id="footer">
+        <p> Rock breaks Scissors || Paper covers Rock || Scissors cut Paper</p>
+    </footer>
 
     <script src="assets/js/scrip.js"></script>
 </body>
