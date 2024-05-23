@@ -13,8 +13,28 @@ for (let button of buttons) {
 
 function playGame(playerChoice) {
 
-        /*generates computer choice*/
-        const computerChoice = choices[Math.floor(Math.random() * 3)];
-        let result = "";
-        console.log(computerChoice);
+    /*generates computer choice*/
+    const computerChoice = choices[Math.floor(Math.random() * 3)];
+    let result = "";
+    console.log(computerChoice);
+
+     /*compares playerchoice to computerchoice*/
+     if (playerChoice === computerChoice) {
+        result = "DRAW!"
+    } else {
+        switch (playerChoice) {
+            case "rock":
+                result = (computerChoice === "scissors") ? "WIN!" : "LOSE!";
+                break;
+            case "paper":
+                result = (computerChoice === "rock") ? "WIN!" : "LOSE!";
+                break;
+            case "scissors":
+                result = (computerChoice === "paper") ? "WIN!" : "LOSE!";
+                break;
+        }
+    }
+    console.log(result);
+
+
 }
