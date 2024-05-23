@@ -2,6 +2,9 @@
 
 const choices = ["rock", "paper", "scissors"];
 const buttons = document.getElementsByClassName("controls");
+const playerDisplay = document.getElementById("playerchoiceimg");
+const computerDisplay = document.getElementById("computerchoiceimg");
+const resultDisplay = document.getElementById("result");
 
 /* button click starts game */
 for (let button of buttons) {
@@ -36,5 +39,13 @@ function playGame(playerChoice) {
     }
     console.log(result);
 
+    /*changes images to player and computer choice and prints result*/
+    playerDisplay.src = `assets/images/${playerChoice}.png`;
+    playerDisplay.alt = choices[playerChoice];
+
+    computerDisplay.src = `assets/images/${computerChoice}.png`;
+    computerDisplay.alt = choices[computerChoice];
+
+    resultDisplay.textContent = result;
 
 }
