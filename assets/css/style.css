@@ -1,0 +1,52 @@
+/* ---------- General Styles */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background-color: #AAD7D9;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.heading {
+    font-size: 3.5rem;
+    margin-top: 10px;
+}
+
+#gamearea {
+    background-color: #92C7CF;
+    width: 80%;
+    height: 70vh;
+    margin: auto;
+}
+
+/* ---------- controls area */
+#controlarea {
+    margin-top: 30px;
+}
+
+.controls {
+    background-color: white;
+    width: 200px;
+    height: 210px;
+}
+
+.controls img {
+    width: 100%;
+    height: auto;
+}
+
+/* ---------- Changes control images on mouse hover https://codepen.io/gg-1414/pen/pojXPKP */
+.controls img:nth-child(2) {
+    display: none;
+}
+
+.controls:hover img:nth-child(1) {
+    display: none;
+}
+
+.controls:hover img:nth-child(2) {
+    display: block;
+}
