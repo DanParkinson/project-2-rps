@@ -21,8 +21,8 @@ function playGame(playerChoice) {
     let result = "";
     console.log(computerChoice);
 
-     /*compares playerchoice to computerchoice*/
-     if (playerChoice === computerChoice) {
+    /*compares playerchoice to computerchoice*/
+    if (playerChoice === computerChoice) {
         result = "DRAW!"
     } else {
         switch (playerChoice) {
@@ -48,4 +48,15 @@ function playGame(playerChoice) {
 
     resultDisplay.textContent = result;
 
+    /*resets color of results messages*/
+    resultDisplay.classList.remove("greentext", "redtext")
+
+    switch (result) {
+        case "WIN!":
+            resultDisplay.classList.add("greentext");
+            break;
+        case "LOSE!":
+            resultDisplay.classList.add("redtext");
+            break;
+    }
 }

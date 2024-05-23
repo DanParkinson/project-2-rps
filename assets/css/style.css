@@ -97,6 +97,15 @@ body {
     width: 75px;
 }
 
+/* ---------- result color changes */
+.redtext {
+    color: red;
+}
+
+.greentext {
+    color:green;
+}
+
 /* --------- Media queries smaller than 400px */
 
 @media (max-width: 400px) {
