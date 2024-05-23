@@ -56,7 +56,7 @@ body {
     display: flex;
     flex-direction: row;
     margin: auto;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
 }
 
@@ -64,12 +64,14 @@ body {
     padding: 10px;
 }
 
-#playerchoice, #computerchoice {
-    width:100px;
+#playerchoice,
+#computerchoice {
+    width: 100px;
     height: 240px;
 }
 
-#playerchoice img, #computerchoice img {
+#playerchoice img,
+#computerchoice img {
     background-color: white;
     width: 100%;
     height: auto;
@@ -111,12 +113,14 @@ body {
         height: 80px;
     }
 
-    #playerchoice, #computerchoice {
-        width:80px;
+    #playerchoice,
+    #computerchoice {
+        width: 80px;
         height: 150px;
     }
 
-    #playerchoice h2, #computerchoice h2{
+    #playerchoice h2,
+    #computerchoice h2 {
         font-size: 1rem;
     }
 
@@ -127,6 +131,7 @@ body {
         width: 75px;
     }
 }
+
 /* --------- Media queries bigger than 768px */
 @media (min-width: 768px) {
     .heading {
@@ -139,8 +144,9 @@ body {
         margin: 10px;
     }
 
-    #playerchoice, #computerchoice {
-        width:150px;
+    #playerchoice,
+    #computerchoice {
+        width: 150px;
         height: 200px;
     }
 
@@ -166,8 +172,9 @@ body {
         margin: 10px;
     }
 
-    #playerchoice, #computerchoice {
-        width:150px;
+    #playerchoice,
+    #computerchoice {
+        width: 150px;
         height: 200px;
     }
 
@@ -176,7 +183,7 @@ body {
     }
 
     #scorearea {
-        width:100%;
+        width: 100%;
     }
 
     #scorearea p {
@@ -184,7 +191,5 @@ body {
         font-size: 1.5rem;
         margin: 5px;
         padding-top: 40px;
-
     }
-
 }
