@@ -50,3 +50,33 @@ body {
 .controls:hover img:nth-child(2) {
     display: block;
 }
+
+/* ---------- choicearea */
+#choicearea {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content:space-evenly;
+    align-items: center;
+    width:80%
+}
+
+.playerchoice img, .computerchocie img {
+    background-color: white;
+    width: 200px;
+    height: 210px;
+}
+
+#result {
+    font-size: 3.5rem;
+}
+
+/* ---------- scorearea */
+#scorearea {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 60%;
+    margin: auto;
+    margin-top: 50px;
+}
