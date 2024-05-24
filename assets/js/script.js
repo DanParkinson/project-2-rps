@@ -1,3 +1,9 @@
+
+/* loads DomCOntent and updates highScore with local data */
+document.addEventListener("DOMContentLoaded", function(){
+    loadHighScore();
+})
+
 /* constants and choice array */
 const choices = ["rock", "paper", "scissors"];
 const buttons = document.getElementsByClassName("controls");
@@ -13,10 +19,19 @@ const gameArea = document.getElementById("gamearea");
 const footer = document.getElementById("footer");
 const restartButton = document.getElementsByClassName("restart");
 
-
 var currentScore = 0;
 var lives = 3;
-var highScore = localHighScore;
+var highScore = 0;
+
+/* function updates local highscore on page load*/
+function loadHighScore() {
+    if (localStorage.getItem('highScore') !== null) {
+        highScore = JSON.parse(localStorage.getItem('highScore'));
+        highScoreDisplay.textContent = highScore;
+    } else {
+        highScore = 0;
+    }
+}
 
 /* button click starts game */
 for (let button of buttons) {
@@ -84,12 +99,12 @@ function playGame(playerChoice) {
             }
             break;
     }
-    
-    /* updates high score */
+
+    /* updates high score and commits to DOM*/
     if (currentScore > highScore) {
         highScore++;
         let highScoreSerialized = JSON.stringify(highScore);
-        localStorage.setItem("highScore",highScoreSerialized);
+        localStorage.setItem("highScore", highScoreSerialized);
         document.getElementById("highscoredisplay").textContent = highScore;
     }
 }
@@ -99,7 +114,6 @@ function gameOver() {
     footer.classList.add("hide");
     gameArea.classList.add("hide");
     gameOverScreen.classList.remove("hide");
-
 }
 
 /*restart button function*/
@@ -107,10 +121,10 @@ function restart() {
     footer.classList.remove("hide");
     gameArea.classList.remove("hide");
     gameOverScreen.classList.add("hide");
-    
+
     currentScore = 0
     lives = 3;
-      
+
     currentScoreDisplay.textContent = "0";
     livesDisplay.textContent = "3";
 
