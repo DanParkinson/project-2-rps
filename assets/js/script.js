@@ -7,14 +7,16 @@ const resultDisplay = document.getElementById("result");
 const currentScoreDisplay = document.getElementById("currentscoredisplay");
 const livesDisplay = document.getElementById("livesdisplay");
 const highScoreDisplay = document.getElementById("highscoredisplay");
+const localHighScore = JSON.parse(localStorage.getItem("highScore"));
 const gameOverScreen = document.getElementById("gameoverscreen");
 const gameArea = document.getElementById("gamearea");
 const footer = document.getElementById("footer");
 const restartButton = document.getElementsByClassName("restart");
 
+
 var currentScore = 0;
 var lives = 3;
-var highScore = 0;
+var highScore = localHighScore;
 
 /* button click starts game */
 for (let button of buttons) {
@@ -24,6 +26,7 @@ for (let button of buttons) {
     })
 }
 
+/* button click for restart function */
 for (let button of restartButton) {
     button.addEventListener("click", function () {
         restart();
@@ -85,7 +88,9 @@ function playGame(playerChoice) {
     /* updates high score */
     if (currentScore > highScore) {
         highScore++;
-        highScoreDisplay.textContent = highScore;
+        let highScoreSerialized = JSON.stringify(highScore);
+        localStorage.setItem("highScore",highScoreSerialized);
+        document.getElementById("highscoredisplay").textContent = highScore;
     }
 }
 
@@ -94,6 +99,7 @@ function gameOver() {
     footer.classList.add("hide");
     gameArea.classList.add("hide");
     gameOverScreen.classList.remove("hide");
+
 }
 
 /*restart button function*/
@@ -102,18 +108,17 @@ function restart() {
     gameArea.classList.remove("hide");
     gameOverScreen.classList.add("hide");
     
-
     currentScore = 0
     lives = 3;
+      
+    currentScoreDisplay.textContent = "0";
+    livesDisplay.textContent = "3";
 
-    currentScoreDisplay.textContent = `0`;
-    livesDisplay.textContent = `3`;
+    playerDisplay.src = "";
+    playerDisplay.alt = "";
 
-    playerDisplay.src = ``;
-    playerDisplay.alt = ``;
+    computerDisplay.src = "";
+    computerDisplay.alt = "";
 
-    computerDisplay.src = ``;
-    computerDisplay.alt = ``;
-
-    resultDisplay.textContent = ``;
+    resultDisplay.textContent = "";
 }
