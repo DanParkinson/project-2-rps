@@ -9,11 +9,13 @@
 </head>
 
 <body>
+    <!--heading-->
     <header>
         <h1 class="heading">Rock Paper Scissors</h1>
     </header>
 
     <section id="gamearea">
+        <!--buttons for game start-->
         <div id="controlarea">
             <button class="controls" data-type="rock"> <img src="assets/images/rock.png" alt="Rock"><img
                     src="assets/images/rock1.png" alt="Rock"> </button>
@@ -22,26 +24,26 @@
             <button class="controls" data-type="scissors"> <img src="assets/images/scissors.png" alt="scissors"><img
                     src="assets/images/scissors1.png" alt="scissors"> </button>
         </div>
-
+        <!--displays player and computer choice as images-->
         <div id="choicearea">
             <div id="playerchoice">
                 <h2>Player:</h2>
-                <img id="playerchoiceimg" src="" alt="">
+                <img id="playerchoiceimg" src="" alt="player choice image">
             </div>
             <p id="result"></p>
             <div id="computerchoice">
                 <h2>Computer:</h2>
-                <img id="computerchoiceimg" src="" alt="">
+                <img id="computerchoiceimg" src="" alt="computer choice image">
             </div>
         </div>
-
+        <!--displays current score, high score, and lives-->
         <div id="scorearea">
             <p class="scores">Current score: <span id="currentscoredisplay">0</span></p>
             <p class="scores">High score: <span id="highscoredisplay">0</span></p>
             <p class="scores">Lives: <span id="livesdisplay">3</span></p>
         </div>
     </section>
-
+    <!--gameover screen for when lives reach 0-->
     <section id="gameoverscreen" class="hide">
         <h2 class="gameover">GAME OVER!</h2>
         <button class="restart" onclick="restart()">Play Again?</button>
@@ -50,8 +52,8 @@
     <footer id="footer">
         <p> Rock breaks Scissors || Paper covers Rock || Scissors cut Paper</p>
     </footer>
-
-    <script src="assets/js/scrip.js"></script>
+    <!--javascript-->
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>

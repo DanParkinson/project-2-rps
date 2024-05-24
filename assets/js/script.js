@@ -58,6 +58,7 @@ function playGame(playerChoice) {
     /* color of results messages*/
     resultDisplay.classList.remove("greentext", "redtext")
 
+    /* changes scores and lives */
     switch (result) {
         case "WIN!":
             resultDisplay.classList.add("greentext");
@@ -73,7 +74,8 @@ function playGame(playerChoice) {
             }
             break;
     }
-
+    
+    /* updates high score */
     if (currentScore > highScore) {
         highScore++;
         highScoreDisplay.textContent = highScore;
