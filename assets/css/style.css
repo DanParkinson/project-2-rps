@@ -118,7 +118,7 @@ body {
 }
 
 .gameover {
-    font-size: 5rem;
+    font-size: 2.5rem;
     color: red;
 }
 
@@ -196,6 +196,9 @@ footer {
 
 /* --------- Media queries bigger than 1024px */
 @media (min-width: 1024px) {
+    #heading {
+        margin-top: 10px;
+    }
     #gamearea {
         height: 70vh;
         width: 70%
@@ -225,6 +228,6 @@ footer {
         letter-spacing: 2px;
         font-size: 1.5rem;
         margin: 5px;
-        padding-top: 40px;
+        padding-top: 80px;
     }
 }
