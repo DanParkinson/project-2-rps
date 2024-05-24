@@ -10,6 +10,7 @@ const highScoreDisplay = document.getElementById("highscoredisplay");
 const gameOverScreen = document.getElementById("gameoverscreen");
 const gameArea = document.getElementById("gamearea");
 const footer = document.getElementById("footer");
+const restartButton = document.getElementsByClassName("restart");
 
 var currentScore = 0;
 var lives = 3;
@@ -20,6 +21,12 @@ for (let button of buttons) {
     button.addEventListener("click", function () {
         let playerChoice = this.getAttribute("data-type");
         playGame(playerChoice);
+    })
+}
+
+for (let button of restartButton) {
+    button.addEventListener("click", function () {
+        restart();
     })
 }
 
