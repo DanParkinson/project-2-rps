@@ -1,8 +1,7 @@
-
 /* loads DomCOntent and updates highScore with local data */
 document.addEventListener("DOMContentLoaded", function () {
     loadHighScore();
-})
+});
 
 /* constants and choice array */
 const choices = ["rock", "paper", "scissors"];
@@ -38,14 +37,14 @@ for (let button of buttons) {
     button.addEventListener("click", function () {
         let playerChoice = this.getAttribute("data-type");
         playGame(playerChoice);
-    })
+    });
 }
 
 /* button click for restart function */
 for (let button of restartButton) {
     button.addEventListener("click", function () {
         restart();
-    })
+    });
 }
 
 function playGame(playerChoice) {
@@ -56,7 +55,7 @@ function playGame(playerChoice) {
 
     /*compares playerchoice to computerchoice*/
     if (playerChoice === computerChoice) {
-        result = "DRAW!"
+        result = "DRAW!";
     } else {
         switch (playerChoice) {
             case "rock":
@@ -81,7 +80,7 @@ function playGame(playerChoice) {
     resultDisplay.textContent = result;
 
     /* color of results messages*/
-    resultDisplay.classList.remove("greentext", "redtext")
+    resultDisplay.classList.remove("greentext", "redtext");
 
     /* changes scores and lives */
     switch (result) {
@@ -123,7 +122,7 @@ function restart() {
     gameArea.classList.remove("hide");
     gameOverScreen.classList.add("hide");
 
-    currentScore = 0
+    currentScore = 0;
     lives = 3;
 
     currentScoreDisplay.textContent = "0";
