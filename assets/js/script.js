@@ -1,6 +1,6 @@
 
 /* loads DomCOntent and updates highScore with local data */
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function () {
     loadHighScore();
 })
 
@@ -96,6 +96,7 @@ function playGame(playerChoice) {
             livesDisplay.textContent = lives;
             if (lives < 1) {
                 gameOver();
+                
             }
             break;
     }
