@@ -95,7 +95,6 @@ function playGame(playerChoice) {
             livesDisplay.textContent = lives;
             if (lives < 1) {
                 gameOver();
-                
             }
             break;
     }

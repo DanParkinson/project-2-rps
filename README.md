@@ -184,11 +184,11 @@ User story testing
 
 The html code passed all checks except for two empty image sections inside the choice area. This was left as the images are populated with src and alt text when the users clicks on one of the control buttons. Error left in.
 
-### CSS
+## CSS
 
 - No errors found
 
-### JS
+## Javascript
 
 ### Warnings Fixed
 
@@ -199,7 +199,7 @@ The html code passed all checks except for two empty image sections inside the c
 - missing semicolon on line 83.
 - missing semicolon on line 125.
 
-# Warnings not Fixed
+### Warnings not Fixed
 - line 37 Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (playGame)
 - line 45 Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (restart)
 
