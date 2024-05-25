@@ -225,3 +225,4 @@ The html code passed all checks except for two empty image sections inside the c
 - inspiration for playgame() switch mechanic in game came from https://www.youtube.com/watch?v=3uKdQx-SZ5A
 - favicon from https://favicon.io/emoji-favicons/raised-fist
 - screen size image - https://techsini.com/multi-mockup/index.php
+- flow diagram https://app.smartdraw.com/editor.aspx?templateId=5375d76a-18f5-49fc-bb02-78cfb46beb7e&flags=128#depoId=57672055&credID=-64393477
