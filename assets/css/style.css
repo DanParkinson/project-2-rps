@@ -3,6 +3,10 @@ main {
     flex: 1 0 auto;
 }
 
+header {
+    height:15vh;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
@@ -11,6 +15,7 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
+    padding-bottom: 0;
 }
 
 .heading {
@@ -20,8 +25,8 @@ body {
 
 #gamearea {
     background-color: #92C7CF;
-    width: 80%;
-    height: 60vh;
+    width: 90%;
+    height: 45vh;
     margin: auto;
 }
 
@@ -89,9 +94,9 @@ body {
 #scorearea {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    width: 80%;
+    
     margin: auto;
 }
 
@@ -101,6 +106,12 @@ body {
     margin: 5px;
     margin-top: 30px;
     width: 75px;
+}
+
+footer {
+    margin-top: 10px;
+    width: 90%;
+    margin: auto;
 }
 
 /* ---------- result color changes */
@@ -130,106 +141,47 @@ body {
     background-color: white;
 }
 
-footer {
-    margin-top: 10px;
-}
-
 /* --------- Media queries smaller than 400px */
 
 @media (max-width: 400px) {
-    .heading {
-        font-size: 3rem;
+
+    header {
+        height: 20vh;
     }
 
     #gamearea {
-        height: 50vh;
+        height:380px;
     }
 
-    .controls {
-        width: 80px;
-        height: 80px;
+}
+
+/* --------- Media queries bigger than 768px */
+@media (min-width: 540px) {
+    header {
+        height:20vh;
     }
 
-    #playerchoice,
-    #computerchoice {
-        width: 80px;
-        height: 150px;
-    }
+    #gamearea {
+        height:380px;
+    } 
 
-    #playerchoice h2,
-    #computerchoice h2 {
-        font-size: 1rem;
-    }
-
-    #scorearea p {
-        letter-spacing: 1px;
-        font-size: 0.75rem;
-        margin: 5px;
-        width: 75px;
-    }
 }
 
 /* --------- Media queries bigger than 768px */
 @media (min-width: 768px) {
-    .heading {
-        font-size: 3.5rem;
+
+    header {
+        height:10vh;
     }
 
     .controls {
-        width: 100px;
-        height: 100px;
-        margin: 10px;
-    }
-
-    #playerchoice,
-    #computerchoice {
-        width: 100px;
+        background-color: white;
+        width: 150px;
         height: 150px;
+        cursor: pointer;
     }
 
-    #scorearea p {
-        letter-spacing: 0.5px;
-        font-size: 1rem;
-        margin: 5px;
-        width: 80%;
-        padding-top: 20px;
-    }
-}
-
-/* --------- Media queries bigger than 1024px */
-@media (min-width: 1024px) {
-    #heading {
-        margin-top: 10px;
-    }
     #gamearea {
-        height: 70vh;
-        width: 70%
-    }
-
-    .controls {
-        width: 150px;
-        height: 150px;
-        margin: 10px;
-    }
-
-    #playerchoice,
-    #computerchoice {
-        width: 150px;
-        height: 150px;
-    }
-
-    #choicearea div {
-        padding: 0 30px;
-    }
-
-    #scorearea {
-        width: 100%;
-    }
-
-    #scorearea p {
-        letter-spacing: 2px;
-        font-size: 1.5rem;
-        margin: 5px;
-        padding-top: 80px;
-    }
+        height:450px;
+    } 
 }
