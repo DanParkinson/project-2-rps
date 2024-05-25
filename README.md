@@ -111,21 +111,32 @@ https://www.figma.com/design/xG2N96cHdC29XXobLBx1vY/Figma-basics?node-id=601-10&
 - Tested lives decrease with each loss and when Lives hit 0 game over screen shows.
 - Tested the restart button restarts the game.
 
+User story testing
+
+| User story                                                                                    | Expeceted result | Pass |
+| ----------------------------------------------------------------------------------------------|--------------------------------------------------------------------|------|
+| As a user, I want to be able to play Rock, Paper, Scissors on various device sizes.           | Screen sizes responisive on all screentypes                        |&check; |   
+| As a user, I want to know the rules of Rock, Paper, Scissors.                                 | Rules included in the footer                                       |&check; | 
+| As a user, I want to challenge myself to beat my highscore.                                   | Highscore is saved and loaded locally to allow users to come back  |&check; | 
+| As a user, I want to be able to see the computers choice to know if I have won, drawn or lost.| Choice area display graphics of user and computer choice as well as the result |&check; | 
+| As a site owner, I want users to understand the rules and play the game Rock, Paper, Scissors.| Rules and game included to allow users to do this                  |&check; | 
+| As a site owner, I want users to visit the website multiple times.                            | Players encouraged to come back to beat their highscore           |&check; | 
+
 ## Validator Testing
 
-# HTML
+### HTML
 
-[html errors](readme/images/htmlerrors.png)
+![html errors](readme/images/htmlerrors.png)
 
 The html code passed all checks except for two empty image sections inside the choice area. This was left as the iamges are populated with src and alt text when the users clicks on one of the control buttons. Error left in.
 
-# CSS
+### CSS
 
 - No errors found
 
-# JS
+### JS
 
-# Warnings Fixed
+### Warnings Fixed
 
 - missing semicolon on line 4.
 - missing semicolon on line 40.
@@ -140,7 +151,28 @@ The html code passed all checks except for two empty image sections inside the c
 
 - not fixed as Code Institute tutorial said they were okay.
 
+### Errors
+
 - No errors
+
+### Lighthouse report
+
+![Lighthouse check](readme/images/lighthouse.png)
+
+- Lighthouse reported no issues with the website.
+
+## Deployment 
+
+- webiste fully deployed to GitHub pages
+
+## Credits
+
+- Rock paper scissors images from https://www.shutterstock.com/image-vector/colorful-hand-icon-set-rock-paper-2151726093
+- inspiration for playgame() switch mechanic in game came from https://www.youtube.com/watch?v=3uKdQx-SZ5A
+
+
+
+
 
 
 
