@@ -219,6 +219,32 @@ The html code passed all checks except for two empty image sections inside the c
 
 - website fully deployed to GitHub pages
 
+- Go into the project repository that you want to deploy.
+- Click the settings on the menu bar of the page.
+
+![Deployment1](readme/images/deployment1.png)
+
+- Check that the repository name is correct.
+- In the general menu on the left-hand side, click the pages tab.
+
+![Deployment2](readme/images/deployment2.png)
+
+- Source should be set to Deploy from a branch.
+
+![Deployment3](readme/images/deployment3.png)
+
+- Underneath, the Branch section is selected. Here we use the main branch and root folder and save it.
+
+![Deployment4](readme/images/deployment4.png)
+
+- Go back to the code page and you will see the Deployment section on the right-hand side.
+
+![Deployment5](readme/images/deployment5.png)
+
+- Go inside the deployments, you can see the address of your website.
+
+![Deployment6](readme/images/deployment6.png)
+
 ## Credits
 
 - Rock paper scissors images from https://www.shutterstock.com/image-vector/colorful-hand-icon-set-rock-paper-2151726093
